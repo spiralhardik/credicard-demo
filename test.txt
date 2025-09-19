@@ -1,0 +1,64 @@
++-------------------+
+|  Project Folder   |
+|-------------------|
+| index.html        |
+| about.html        |
+| contact.html      |
+| css/bootstrap.min.css |
++-------------------+
+          |
+          v
++-------------------+
+| Initialize NPM    |
+|-------------------|
+| npm init -y       |
++-------------------+
+          |
+          v
++-------------------+
+| Install PurgeCSS  |
+|-------------------|
+| npm install purgecss --save-dev |
++-------------------+
+          | 
+          v
++-------------------+
+| Add Purge Script  |
+|-------------------|
+| npm set-script purge "purgecss --css \"css/bootstrap.min.css\" --content \"**/*.html\" --output \"css/bootstrap.clean.css\"" |
++-------------------+
+          |
+          v
++-------------------+
+| Run PurgeCSS      |
+|-------------------|
+| npm run purge     |
++-------------------+
+          |
+          v
++-------------------+
+| Output Clean CSS  |
+|-------------------|
+| css/bootstrap.clean.css |
++-------------------+
+          |
+          v
++-------------------+
+| Update HTML       |
+|-------------------|
+<!-- | <link rel="stylesheet" href="css/bootstrap.clean.css"> | -->
++-------------------+
+          |
+          v
++-------------------+
+| Test Website      |
+|-------------------|
+| Open in browser → everything works ✅ |
++-------------------+
+          |
+          v
++-------------------+
+| Add New Pages     |
+|-------------------|
+| Add HTML files → run npm run purge again |
++-------------------+
