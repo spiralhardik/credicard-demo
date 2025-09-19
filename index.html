@@ -276,15 +276,7 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Initialize CSS Purger when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Small delay to ensure all stylesheets are loaded
-            setTimeout(() => {
-                new CSSPurger();
-            }, 100);
-        });
-
+    <script>       
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
